@@ -1,6 +1,6 @@
 # Analysis for Effect of Mutation Subtypes on the Allele Frequency Spectrum and Population Genetics Inference # 
 
-Step 1) Download zipped analysis directory from: zenodo.org. Use tar -xvzf afs_analysis.tar to unzip file. Major files in directories include: 
+Step 1) Download zipped analysis directory from: https://zenodo.org/record/7430597#.Y5fphi1h1pQ. Use tar -xvzf afs_analysis.tar to unzip file. Major files in directories include: 
 
 a) ./data
   - ./data/mst_sfs/: Text file for each of 96 subtypes. File all_subtypes_afs.txt contains all 96 AFS in one file 
