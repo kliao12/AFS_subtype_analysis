@@ -14,12 +14,12 @@ b) ./output
   - ./output/D2_stat/by_subtype: Output of D-2 statistic for each subtypes AFS
   - ./output/DaDi: Output from running dadi 10 times on each subtypes AFS.
   
-c) ./to_submit_scripts 
+c) ./scripts 
   - entire_analysis.R: R script containing entire pipeline sourcing each relevant analysis file 
   - afs_paper_functions.R: R script with functions used
 
 Step 2) Install software needed to run all analysis completely from scratch.  
-- R libraries needed can be found in ./to_submit_scripts/libraries_needed.R
+- R libraries needed can be found in ./scripts/libraries_needed.R
 - DaDi (https://dadi.readthedocs.io/en/latest/user-guide/installation/)
 - SLURM like parallel computing envrionment 
 
