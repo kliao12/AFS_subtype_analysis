@@ -17,11 +17,12 @@ b) ./output
 c) ./scripts 
   - entire_analysis.R: R script containing entire pipeline sourcing each relevant analysis file 
   - afs_paper_functions.R: R script with functions used
+  - Note: files with accompanying same name .slurm scripts were run in parallel to avoid long computation times. 
 
 Step 2) Install software needed to run all analysis completely from scratch.  
-- R libraries needed can be found in ./scripts/libraries_needed.R
-- DaDi (https://dadi.readthedocs.io/en/latest/user-guide/installation/)
-- SLURM like parallel computing envrionment 
+  - R libraries needed can be found in ./scripts/libraries_needed.R. (Note: Analysis run using R version 4.2.2)
+  - DaDi - Python 3 version (https://dadi.readthedocs.io/en/latest/user-guide/installation/)
+  - SLURM like parallel computing environment
 
 Step 3) Run analysis by going through entire_analysis.R in sections.
 - Create AFS for each of 96 mutation subtypes. Outputs separate txt file for each and a single with all 96 subtypes.
