@@ -1,6 +1,6 @@
 # Analysis for Effect of Mutation Subtypes on the Allele Frequency Spectrum and Population Genetics Inference # 
 
-Step 1) Download zipped analysis directory from: https://zenodo.org/record/7430597#.Y5fphi1h1pQ. Use tar -xvzf afs_analysis.tar.gz to unzip file. Major files in directories include: 
+Step 1) Download zipped analysis directory from: https://zenodo.org/record/7434407#.Y5jHLC1h30o. Use tar -xvzf afs_analysis.tar.gz to unzip file. Major files in directories include: 
 
 a) ./data
   - ./data/mst_sfs/: Text file for each of 96 subtypes. File all_subtypes_afs.txt contains all 96 AFS in one file 
@@ -20,18 +20,22 @@ c) ./scripts
   - Note: files with accompanying same name .slurm scripts were run in parallel to avoid long computation times. 
 
 Step 2) Install software needed to run all analysis completely from scratch.  
-  - R libraries needed can be found in ./scripts/libraries_needed.R. (Note: Analysis run using R version 4.2.2)
+  - R libraries needed can be found in ./scripts/libraries_needed.R.
+    - Note: Analysis run using R version 4.2.2)
+    - Note: Package 'xlsx' was used in analysis to export to .xlsx files, but some computers had issues installing so commented out
+  - Python 3
   - DaDi - Python 3 version (https://dadi.readthedocs.io/en/latest/user-guide/installation/)
-  - SLURM like parallel computing environment
+  - SLURM for parallel computing
 
 Step 3) Run analysis by going through entire_analysis.R in sections.
-- Create AFS for each of 96 mutation subtypes. Outputs separate txt file for each and a single with all 96 subtypes.
-- Create dataframe of genome wide AFS statistics for each of 96 subtypes. Includes D, D-2, % singles, doubles, triples, etc 
-- AFS heterogeneity across subtypes and signals of recurrent mutations and gene conversion shaping the AFS 
-  - Signals of mutation rate/recurrent mutations on AFS. Look at singleton/doubleton ratio by mutation rate
-  - Signals of gBGC on AFS. Split into WS, SW, and indifferent mutation types. Compare D and D-2 across subtypes  
-- Effect of genome wide AFS heterogeneity across subtypes on demographic inference using DaDi
-- Effect of subtype composition and local genomic factors on the local AFS 
+  - Create AFS for each of 96 mutation subtypes. Outputs separate txt file for each and a single with all 96 subtypes.
+  - Create dataframe of genome wide AFS statistics for each of 96 subtypes. Includes D, D-2, % singles, doubles, triples, etc
+AFS heterogeneity across subtypes and signals of recurrent mutations and gene conversion shaping the AFS
+    - Signals of mutation rate/recurrent mutations on AFS. Look at singleton/doubleton ratio by mutation rate
+    - Signals of gBGC on AFS. Split into WS, SW, and indifferent mutation types. Compare D and D-2 across subtypes
+  - DaDi Analysis: Effect of genome wide AFS heterogeneity across subtypes on demographic inference
+    - These scripts require installing DaDi on Python3 (see above). 
+  - Regional 100Kb Analysis: Effect of subtype composition and local genomic factors on the regional AFS
  
 
 
